@@ -1,3 +1,6 @@
+dnmonster:
+    image: amouat/dnmonster:1.0
+
 identidock:
     build: .
     ports: 
@@ -6,4 +9,6 @@ identidock:
         ENV: DEV
     volumes:
         - ./app:/app
+    links:
+        - dnmonster
 
